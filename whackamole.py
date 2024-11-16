@@ -6,7 +6,6 @@ def main():
     try:
         pygame.init()
         # You can draw the mole with this snippet:
-        # Well Well Well
         mole_image = pygame.image.load("mole.png")
         screen = pygame.display.set_mode((640, 512))
         clock = pygame.time.Clock()
@@ -21,9 +20,6 @@ def main():
                     if x <= button_x < x+32 and y <= button_y < y+32:
                         x = random.randrange(0, 20) * 32
                         y = random.randrange(0, 16) * 32
-                        print("You got it!")
-                    else:
-                        print("Nope you missed!!")
             screen.fill("light green")
             screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
             for i in range(1,33):
